@@ -38,7 +38,7 @@ while($hasil = mysqli_fetch_array($select)){
         <td><?php echo $hasil['telepon'] ?></td>
         <td><?php echo $hasil['jurusan'] ?></td>
         <td>
-            <a href="form-edit.php">EDIT</a> |
+            <a href="form-edit.php?nim=<?php echo $hasil['nim'] ?>">EDIT</a> |
             <a href="delete.php?nim=<?php echo $hasil['nim'] ?>">Hapus</a>
         </td>
     </tr>

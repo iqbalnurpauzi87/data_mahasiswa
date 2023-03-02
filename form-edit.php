@@ -2,7 +2,6 @@
 include 'koneksi.php';
 $data_edit = mysqli_query($conn, "SELECT * FROM mahasiswa WHERE nim = '".$_GET['nim']."' ");
 $result = mysqli_fetch_array($data_edit);
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,22 +20,22 @@ $result = mysqli_fetch_array($data_edit);
         <tr>
             <td>NIM</td>
             <td>:</td>
-            <td><input type="text" name="nim" placeholder="15xxx" value="<?php echo $result['nim'] ?>"   > </td>
+            <td><input type="text" name="nim" value="<?php echo $result['nim'] ?>"   > </td>
         </tr>
         <tr>
-            <td>Nama Lengkap</td>
+            <td>Nama</td>
             <td>:</td>
-            <td><input type="text" name="nama" placeholder="Budi" required value="<?php echo $result['nama_lengkap'] ?>"></td>
+            <td><input type="text" name="nama" required value="<?php echo $result['nama_lengkap'] ?>"></td>
         </tr>
         <tr>
             <td>Telepon</td>
             <td>:</td>
-            <td><input type="text" name="telepon" placeholder="08xxx" required value="<?php echo $result['telepon'] ?>"></td>
+            <td><input type="text" name="telepon" required value="<?php echo $result['telepon'] ?>"></td>
         </tr>
         <tr>
             <td>Email</td>
             <td>:</td>
-            <td><input type="email" name="email" placeholder="xxx@gmail.com" required value="<?php echo $result['email'] ?>"></td>
+            <td><input type="email" name="email" required value="<?php echo $result['email'] ?>"></td>
         </tr>
         <tr>
             <td>Jurusan</td>
@@ -57,9 +56,16 @@ $result = mysqli_fetch_array($data_edit);
     </table>
 </form>
 <?php
-include 'koneksi.php';
 if(isset($_POST['edit'])){
-                          
+        $update = mysqli_query($conn, "UPDATE mahasiswa SET nama_lengkap = '".$_POST['nama']."',
+        telepon = '".$_POST['telepon']."', email = '".$_POST['email']."', jurusan = '".$_POST['jurusan']."'
+        WHERE nim = '".$_GET['nim']."'");
+        if($update){
+            echo 'berhasil edit';
+
+        }   else {
+            echo 'gagal edit';
+        }  
 }
 ?>
 
