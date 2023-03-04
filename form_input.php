@@ -15,22 +15,22 @@
         <tr>
             <td>NIM</td>
             <td>:</td>
-            <td><input type="text" name="nim" placeholder="15xxx">15123</td>
+            <td><input type="text" name="nim" placeholder="15xxx"></td>
         </tr>
         <tr>
             <td>Nama Lengkap</td>
             <td>:</td>
-            <td><input type="text" name="nama" placeholder="Budi" required>budi</td>
+            <td><input type="text" name="nama" placeholder="Budi" required></td>
         </tr>
         <tr>
             <td>Telepon</td>
             <td>:</td>
-            <td><input type="text" name="telepon" placeholder="08xxx" required>083822</td>
+            <td><input type="text" name="telepon" placeholder="08xxx" required></td>
         </tr>
         <tr>
             <td>Email</td>
             <td>:</td>
-            <td><input type="email" name="email" placeholder="xxx@gmail.com" required>iqbal@gmail.com</td>
+            <td><input type="email" name="email" placeholder="xxx@gmail.com" required></td>
         </tr>
         <tr>
             <td>Jurusan</td>

@@ -8,8 +8,10 @@
 </head>
 <body>
     <h2>Data Mahasiswa ELKA UNJ 2018</h2>
+    <div>
     <a href="form_input.php" style="padding: 0.4% 0.8%; background-color:#090; color:#fff; border-radius:2px; text-decoration:none; ">Tambah data</a>
-<br>
+    </div>
+    <br>
 <br>
     <table border="1" cellspacing="0" width="50%";>
     <tr style= "text-align:center;font-weight:bold; background-color:#eee;"> 
@@ -31,7 +33,7 @@ while($hasil = mysqli_fetch_array($select)){
 ?>
  
  <tr style= "text-align:center;"> 
-        <td><?php echo $no++ ?></td>
+        <td><?php echo $no+=1 ?></td>
         <td><?php echo $hasil['nim'] ?></td>
         <td><?php echo $hasil['nama_lengkap'] ?></td>
         <td><?php echo $hasil['email'] ?></td>
